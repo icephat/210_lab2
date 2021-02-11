@@ -3,7 +3,7 @@ int main()
 {
     char a[15];
     int i;
-    scanf("%s",&a);
+    scanf("%s",a);
     for(i=0;i<a[i];i++)
     {
         switch(a[i])
