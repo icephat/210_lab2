@@ -1,11 +1,12 @@
 #include<stdio.h>
 int main()
 {
-    int a,b,c,sum;
-    scanf("%d",&a);
-    scanf("%d",&b);
-    scanf("%d",&c);
-    sum=a+b+c;
+    int sum=0,i,a[3]={};
+    for(i=0;i<3;i++)
+    {
+        scanf("%d",&a[i]);
+        sum+=a[i];
+    }
     if(sum>=80&&sum<=100)
     {
         printf("A");
