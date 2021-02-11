@@ -1,49 +1,34 @@
 #include<stdio.h>
 int main()
 {
-    char b;
-    float mi,m=0,a;
-    scanf("%c",&b);
-    scanf("%f",&mi);
-    if(b=='A')
+    int t,t2;
+    char pro;
+    float ti,i=0;
+    scanf ("%c",&pro);
+    scanf ("%f",&ti);
+    t = ti;
+    t2 = ti*100;
+    t2 = t2%100;
+    if (pro == 'A')
     {
-        mi=mi-200;
-        m+=199;
-        if(mi>0)
+         i = i+199;
+         if (ti>200)
         {
-            mi=mi*3;
-            m=m+mi;
-            a=(int)m+0.5;
-            if(m>=a)
-            {
-                m=(int)m+1;
-                printf("%.2f",m);
-            }
-            else
-                printf("%.2f",m);
+        t = t-200;
+        i += t*3;
+        i += t2*3/60.0;
         }
-        else
-            printf("%.2f",m);
     }
-    else if(b=='B')
+    else if(pro =='B')
     {
-        m+=299;
-        mi=mi-400;
-        if(mi>0)
-        {
-            mi=mi*2;
-            m=m+mi;
-            a=(int)m+0.5;
-            if(m>=a)
-            {
-                m=(int)m+1;
-                printf("%.2f",m);
-            }
-            else
-                printf("%.2f",m+0.07);
-        }
-        else
-            printf("%.2f",m);
+         i = i+299;
+         if(ti>400)
+         {
+            t = t-400;
+            i += t*2;
+            i += t2*2/60.0;
+         }
     }
+    printf("%.2f",i);
     return 0;
 }
