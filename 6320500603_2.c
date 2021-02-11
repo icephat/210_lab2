@@ -17,10 +17,7 @@ int main()
         sum*=2;
         t=(int)sum+299;
     }
-    printf("%.2f",t);
-
-
-
+    printf("%.2f",t+1);
 
     return 0;
 }
