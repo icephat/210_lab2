@@ -1,67 +1,47 @@
 #include<stdio.h>
 int main()
 {
-    char a,b;
-
-    scanf("%c",&a);
-    scanf("%d",&b);
-    if(a>=65&&a<=73)
+    int d;
+    char n,hand=92;
+    scanf("%c" ,&n);
+    scanf("%d" ,&d);
+    if(d%10==5)
     {
-        if(b%2!=0)
-        {
-            if(b==5||b%10==5)
-            {
-                printf("\(^_^)/");
-            }
-            else
-            {
-                printf("(^_^)");
-            }
-
-        }
-        else
+        printf("%c" ,hand);
+    }
+    if(d%2==1)
+    {
+       if(n>=65&&n<=73)
+       {
+           printf("(^_^)");
+       }
+       else if(n>=74&&n<=82)
+       {
+           printf("(*o*)");
+       }
+       else if(n>=83&&n<=90)
+       {
+           printf("(T_T)");
+       }
+    }
+    else if(d%2==0)
+    {
+        if(n>=65&&n<=73)
         {
             printf("{@_@}");
         }
-    }
-    else if(a>=74&&a<=82)
-    {
-          if(b%2!=0)
-        {
-            if(b==5||b%10==5)
-            {
-                printf("\(*o*)/");
-            }
-            else
-            {
-                printf("(*o*)");
-            }
-
-        }
-        else
+        else if(n>=74&&n<=82)
         {
             printf("{*v*}");
         }
+        else if(n>=83&&n<=90)
+        {
+            printf("{X_X}");
+        }
     }
-    else if(a>=83&&a<=90)
+    if(d%10==5)
     {
-        if(b%2!=0)
-        {
-            if(b==5||b%10==5)
-            {
-                printf("\(T_T)/");
-            }
-            else
-            {
-                printf("(T_T)");
-            }
-
-        }
-        else
-        {
-            printf("{x_x}");
-        }
+        printf("/");
     }
-
     return 0;
 }
